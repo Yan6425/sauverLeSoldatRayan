@@ -3,7 +3,7 @@
 #include <assert.h>
 
 typedef struct Maillon {
-    int donnee;
+    int valeur;
     struct Maillon* suivant;
 } Maillon;
 
@@ -11,7 +11,7 @@ typedef Maillon* Liste;
 
 Liste creerListe(int valeur) {
     Liste liste = malloc(sizeof(Maillon));
-    liste->donnee = valeur;
+    liste->valeur = valeur;
     return liste;
 }
 
@@ -34,13 +34,13 @@ int lireListe(Liste liste, int i){
         assert(0);
     }  
     else {
-        return liste->donnee;
+        return liste->valeur;
     }
 }
 
 int main(int argc, char** argv){
     if (argc < 3 || atoi(argv[1]) < 0) {
-        printf("Erreur d'indice\n");
+        printf("Erreur d'arguments\n");
         return EXIT_FAILURE;
     }
     Liste liste = creerListe(atoi(argv[2]));

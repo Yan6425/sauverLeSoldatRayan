@@ -2,40 +2,18 @@
 #include <stdlib.h>
 #include <assert.h>
 
-typedef struct Maillon {
-    int donnee;
-    struct Maillon* suivant;
-} Maillon;
-
-typedef Maillon* Liste;
+//crée le type liste stp sinon ça marchera pas
 
 Liste creerListe(int valeur) {
-    Liste liste = malloc(sizeof(Maillon));
-    liste->donnee = valeur;
-    return liste;
+    //à toi mon gars
 }
 
 Liste ajouterValeur(Liste liste, int valeur) {
-    if (liste == NULL) {
-        return creerListe(valeur);
-    }
-    else {
-        liste->suivant = ajouterValeur(liste->suivant, valeur);
-        return liste;
-    }
+    //à toi mon gars
 }
 
 int lireListe(Liste liste, int i){
-    if (i) {
-        return lireListe(liste->suivant, i - 1);
-    }
-    else if (liste == NULL) {
-        printf("Erreur d'indice\n");
-        assert(0);
-    }  
-    else {
-        return liste->donnee;
-    }
+    //à toi mon gars
 }
 
 int main(int argc, char** argv){

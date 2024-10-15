@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-//crée le type liste stp sinon ça marchera pas
+//crée le type Liste stp sinon ça marchera pas
 
 Liste creerListe(int valeur) {
     //à toi mon gars
@@ -18,7 +18,7 @@ int lireListe(Liste liste, int i){
 
 int main(int argc, char** argv){
     if (argc < 3 || atoi(argv[1]) < 0) {
-        printf("Erreur d'indice\n");
+        printf("Erreur d'arguments\n");
         return EXIT_FAILURE;
     }
     Liste liste = creerListe(atoi(argv[2]));
